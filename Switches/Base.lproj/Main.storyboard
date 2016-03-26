@@ -139,6 +139,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomButtonBottomConstraint" destination="nxo-fA-aBM" id="5g9-H3-pxL"/>
                         <outlet property="logoImageView" destination="6ac-hH-GV2" id="cRx-c6-WSi"/>
                         <outlet property="messageLabel" destination="JMP-uR-gqu" id="6EG-nE-pA0"/>
                         <outlet property="nextButton" destination="Qir-Up-IJR" id="gX2-gI-tN7"/>

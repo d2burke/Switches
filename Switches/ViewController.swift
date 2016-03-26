@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var sendLabel: UILabel!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var bottomButtonBottomConstraint: NSLayoutConstraint!
     
     //Switches: Common users, Pattern Matching
     //Storyboard: Anchor, Center, 50%, Animate Constraints
@@ -65,7 +66,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 prevButton.hidden = true;
             case 0..<viewWidth:
                 prevButton.hidden = false;
+                
+                //Fade Out
                 logoImageView.alpha = 1 - (scrollView.contentOffset.x / viewWidth)
+                
+                //Fade In
                 userLabel.alpha = scrollView.contentOffset.x / viewWidth
                 
             case viewWidth..<viewWidth*2:
@@ -77,7 +82,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 nextButton.hidden = false;
                 messageLabel.alpha = 1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth
                 sendLabel.alpha = (scrollView.contentOffset.x - viewWidth*2) / viewWidth
-                
+                bottomButtonBottomConstraint.constant = -50 * (1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth)
             case viewWidth*3:
                 nextButton.hidden = true;
                 
