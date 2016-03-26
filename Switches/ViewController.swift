@@ -66,6 +66,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 prevButton.hidden = true;
             case 0..<viewWidth:
                 prevButton.hidden = false;
+                prevButton.alpha = scrollView.contentOffset.x / viewWidth
                 
                 //Fade Out
                 logoImageView.alpha = 1 - (scrollView.contentOffset.x / viewWidth)
@@ -74,12 +75,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 userLabel.alpha = scrollView.contentOffset.x / viewWidth
                 
             case viewWidth..<viewWidth*2:
-                nextButton.hidden = false;
                 userLabel.alpha = 1 - (scrollView.contentOffset.x - viewWidth) / viewWidth
                 messageLabel.alpha = (scrollView.contentOffset.x - viewWidth) / viewWidth
                 
             case viewWidth*2..<viewWidth*3:
                 nextButton.hidden = false;
+                nextButton.alpha = 1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth
                 messageLabel.alpha = 1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth
                 sendLabel.alpha = (scrollView.contentOffset.x - viewWidth*2) / viewWidth
                 bottomButtonBottomConstraint.constant = -50 * (1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth)
