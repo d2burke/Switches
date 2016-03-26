@@ -88,27 +88,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             currentIndex = Int(scrollView.contentOffset.x / viewWidth)
         }
     }
-
-    //Don't use 0 as a tag ID
-    @IBAction func navigate(sender: AnyObject) {
-        if sender.isKindOfClass(UIButton) {
-            let button = sender as! UIButton
-            currentIndex = Int(scrollView.contentOffset.x / viewWidth)
-            var newOffsetX:CGFloat = 0.0
-            
-            switch (currentIndex, button.tag) {
-            case (1...4, 1):
-                newOffsetX = viewWidth * CGFloat(currentIndex - 1)
-            case (0...3, 2):
-                newOffsetX = viewWidth * CGFloat(currentIndex + 1)
-            default:
-                print("nothing")
-            }
-            
-            //Animate to scroll position
-            scrollView.setContentOffset(CGPointMake(newOffsetX, 0), animated: true)
-        }
-
-    }
 }
 
