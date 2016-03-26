@@ -21,6 +21,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    //Switches: Common users, Pattern Matching
+    //Storyboard: Anchor, Center, 50%, Animate Constraints
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
