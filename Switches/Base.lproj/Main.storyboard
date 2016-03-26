@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="messaging.ttf">
@@ -30,8 +31,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="F5y-G7-NvU"/>
                                 </connections>
                             </scrollView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-Zp-Uis">
-                                <rect key="frame" x="47" y="50" width="280" height="280"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2B-Zp-Uis">
+                                <rect key="frame" x="47" y="53" width="280" height="280"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_512" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-hH-GV2">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
@@ -56,24 +57,55 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="BMn-MK-Buf"/>
+                                    <constraint firstAttribute="width" constant="280" id="GwA-EP-ktw"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-yx-1VG">
-                                <rect key="frame" x="0.0" y="557" width="130" height="60"/>
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-yx-1VG">
+                                <rect key="frame" x="0.0" y="607" width="187.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="PWD-kR-PGT"/>
+                                    <constraint firstAttribute="height" constant="60" id="UHa-Do-qb3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Prev">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PWD-kR-PGT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oX-2e-0Ya"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-Up-IJR">
-                                <rect key="frame" x="245" y="557" width="130" height="60"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-Up-IJR">
+                                <rect key="frame" x="187.5" y="607" width="187.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="m0k-Wj-M73"/>
+                                    <constraint firstAttribute="height" constant="60" id="pIh-I5-Tk3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="m0k-Wj-M73"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayc-Jj-4ty"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysc-w9-jl1">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysc-w9-jl1">
+                                <rect key="frame" x="0.0" y="667" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.2588235438" green="0.52156865600000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qh7-3i-2ZG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Let's Go!">
                                     <color key="titleColor" red="0.96975615530000003" green="0.96975615530000003" blue="0.96975615530000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,15 +115,34 @@
                         <color key="backgroundColor" red="0.96975615530303028" green="0.96975615530303028" blue="0.96975615530303028" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCD-wO-Jhk" secondAttribute="bottom" id="1E8-sZ-4DO"/>
+                            <constraint firstItem="ysc-w9-jl1" firstAttribute="top" secondItem="Qir-Up-IJR" secondAttribute="bottom" id="Fcx-EG-LlA"/>
                             <constraint firstItem="LCD-wO-Jhk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lvn-JN-17E"/>
+                            <constraint firstItem="9KJ-yx-1VG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Mit-JT-rE3"/>
+                            <constraint firstItem="q2B-Zp-Uis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="THE-8W-2of"/>
+                            <constraint firstItem="ysc-w9-jl1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YCa-Ug-a9n"/>
+                            <constraint firstAttribute="trailing" secondItem="ysc-w9-jl1" secondAttribute="trailing" id="eRz-69-ROb"/>
+                            <constraint firstItem="9KJ-yx-1VG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fq9-Ze-7be"/>
+                            <constraint firstItem="ysc-w9-jl1" firstAttribute="top" secondItem="9KJ-yx-1VG" secondAttribute="bottom" id="kdL-24-bOi"/>
+                            <constraint firstItem="q2B-Zp-Uis" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33.5" id="mMa-ma-zol"/>
                             <constraint firstItem="LCD-wO-Jhk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nH7-6O-8Ym"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ysc-w9-jl1" secondAttribute="bottom" constant="-50" id="nxo-fA-aBM"/>
+                            <constraint firstItem="Qir-Up-IJR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="txB-so-XOv"/>
                             <constraint firstAttribute="trailing" secondItem="LCD-wO-Jhk" secondAttribute="trailing" id="uzT-oH-xgU"/>
+                            <constraint firstItem="q2B-Zp-Uis" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w00-fI-gz8"/>
+                            <constraint firstAttribute="trailing" secondItem="Qir-Up-IJR" secondAttribute="trailing" id="zXn-Kv-dlg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="w00-fI-gz8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="logoImageView" destination="6ac-hH-GV2" id="cRx-c6-WSi"/>
                         <outlet property="messageLabel" destination="JMP-uR-gqu" id="6EG-nE-pA0"/>
+                        <outlet property="nextButton" destination="Qir-Up-IJR" id="gX2-gI-tN7"/>
+                        <outlet property="prevButton" destination="9KJ-yx-1VG" id="2yP-xm-Ltz"/>
                         <outlet property="scrollView" destination="LCD-wO-Jhk" id="Tai-Vc-4Yu"/>
                         <outlet property="sendLabel" destination="Fw3-iD-YcK" id="6Og-t8-Kz5"/>
                         <outlet property="userLabel" destination="Z4q-al-e5K" id="kFe-HV-B3Q"/>
