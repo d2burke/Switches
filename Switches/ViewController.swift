@@ -54,39 +54,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        if prevButton != nil && nextButton != nil {
-            //Update the view based on the scrollView position
-            switch scrollView.contentOffset.x {
-                case 0:
-                    prevButton.hidden = true;
-                case 0..<viewWidth:
-                    prevButton.hidden = false;
-                    logoImageView.alpha = 1 - (scrollView.contentOffset.x / viewWidth)
-                    userLabel.alpha = scrollView.contentOffset.x / viewWidth
-                    
-                case viewWidth..<viewWidth*2:
-                    nextButton.hidden = false;
-                    userLabel.alpha = 1 - (scrollView.contentOffset.x - viewWidth) / viewWidth
-                    messageLabel.alpha = (scrollView.contentOffset.x - viewWidth) / viewWidth
-                    
-                case viewWidth*2..<viewWidth*3:
-                    nextButton.hidden = false;
-                    messageLabel.alpha = 1 - (scrollView.contentOffset.x - viewWidth*2) / viewWidth
-                    sendLabel.alpha = (scrollView.contentOffset.x - viewWidth*2) / viewWidth
-                    
-                case viewWidth*3:
-                    nextButton.hidden = true;
-                    
-                default:
-                    //() //Do nothing in this case
-                    //
-                    print("wasted cycles")
-            }
-            
-            //Update current index
-            currentIndex = Int(scrollView.contentOffset.x / viewWidth)
-        }
+        print("Offset X: \(scrollView.contentOffset.x)")
     }
 }
 
