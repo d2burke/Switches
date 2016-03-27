@@ -127,7 +127,7 @@ Tapping the "Prev" and "Next" buttons will cause the scrollView to scroll betwee
         case (0...3, 2):
             newOffsetX = viewWidth * CGFloat(currentIndex + 1)
         default:
-            print("nothing")
+            ()
         }
         
         //Animate to scroll position
