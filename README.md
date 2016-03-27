@@ -58,7 +58,7 @@ One of the most common constraints is simply anchoring the various sides of a vi
 ![Bottom Anchor](http://i.imgur.com/HOpxRcz.gif "Bottom Anchor")
 
 ## Centering Views
-Our main logo/icon view will be centered horizontally. To do this, we have to set the `Width` and `Height` constraints. XCode won't be completely happy until we set the vertical constraint as well.  We do this with a simple `Top` constraint to the top of the view.
+Our main logo/icon view will be centered horizontally. To do this, we have to set the `Width` and `Height` constraints as well. XCode won't be completely happy until we set the vertical constraint as well.  We do this with a simple `Top` constraint to the top of the view.
 
 ![Centering](http://i.imgur.com/6xHZidt.gif "Centering")
 
@@ -100,9 +100,8 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
             nextButton.hidden = true;
             
         default:
-            //() //Do nothing in this case
-            //
-            print("wasted cycles")
+            () 	//Do nothing in this case
+            	//leaving this empty causes an error
         }
         
         //Update current index
