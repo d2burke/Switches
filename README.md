@@ -65,7 +65,7 @@ Our main logo/icon view will be centered horizontally. To do this, we have to se
 ## Connecting IBActions
 You can connect multiple buttons to one `@IBAction` method. In our method, we're determining which button was tapped by matching the `tag` value we assigned it in the storyboard. That value is matched inside a tuple so we can also check which "page" we're on.
 
-![Referencing Constraints](http://i.imgur.com/gErz2Wx.gif "Referencing Constraints")
+![Referencing Constraints](http://i.imgur.com/XW3re6p.gif "Referencing Constraints")
 ## Referencing Constraints
 One way to change or animate UIViews that are constrained using autolayout is the animate the constraints themselves. Control-click and drag from the bottom constraint of the bottom button to create the reference. We'll refer to this later and move the button in and out of visibility based on the scrollView's scroll position.
 
