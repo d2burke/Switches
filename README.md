@@ -3,9 +3,13 @@
 Switch statements are super-charged in Swift for iOS powered by Pattern Matching. This tutorial is part of an *Intro to Swift* series and includes a basic Intro to Storyboards.
 
 ## Switch Power
+
+Swift recognizes 7 different patterns: Wildcard, Identifier, Value-Binding, Tuple Pattern, Enumeration Case, Type-Casting, & Expression Pattern.
+
 Here are few new tricks you can use in Swift:
 
-### Ranges
+### Ranges 
+#####(an example of the Expression Pattern)
 You can provide a range as a `case` and Swift will determine whether or not the provided value is found within that range. Notice the use of `...` for inclusive ranges and `..<` for exclusive.
 ```
 switch (value) {
