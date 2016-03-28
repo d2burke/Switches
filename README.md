@@ -55,17 +55,17 @@ switch (button.tag, page){
 ### Simple Anchoring
 One of the most common constraints is simply anchoring the various sides of a view to the edges of your `UIViewController.view`. In this example we anchor the `Leading`, `Trailing`, & `Bottom` edges of the button to the view, then we set the `Height` constraint. This will keep the button at the bottom, stretching across the full width of the view, but maintaining a constant height.
 
-![Bottom Anchor](http://i.imgur.com/HOpxRcz.gif "Bottom Anchor")
+![Bottom Anchor](http://i.imgur.com/fAX4NWH.gif "Bottom Anchor")
 
 ## Centering Views
 Our main logo/icon view will be centered horizontally. To do this, we have to set the `Width` and `Height` constraints as well. XCode won't be completely happy until we set the vertical constraint as well.  We do this with a simple `Top` constraint to the top of the view.
 
-![Centering](http://i.imgur.com/6xHZidt.gif "Centering")
+![Centering](http://i.imgur.com/2ysYHae.gif "Centering")
 
 ## Connecting IBActions
 You can connect multiple buttons to one `@IBAction` method. In our method, we're determining which button was tapped by matching the `tag` value we assigned it in the storyboard. That value is matched inside a tuple so we can also check which "page" we're on.
 
-![IBActions](http://i.imgur.com/1wYGliq.gif "IBActions")
+![IBActions](http://i.imgur.com/gErz2Wx.gif "IBActions")
 ## Scrolling Action Triggers Switch Statement
 As the user scrolls the scrollView, we check to see where the horizontal offset falls. The various page/section icons fade in and out depending on which "page" the user has scrolled to.
 
@@ -138,4 +138,4 @@ Tapping the "Prev" and "Next" buttons will cause the scrollView to scroll betwee
 ## Demo
 If we properly wire up the Prev/Next buttons, anchoring them to the sides as well as the bottom button, properly center our logo/icons, and connect our buttons to the `navigate:` `@IBAction`, our demo app will properly lay itself out, transition on scroll, and navigate on button taps.
 
-![Demo](http://i.imgur.com/W9lHjC0.gif "Demo")
+![Demo](http://i.imgur.com/h3Nzntp.gif "Demo")
