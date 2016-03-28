@@ -144,3 +144,5 @@ Tapping the "Prev" and "Next" buttons will cause the scrollView to scroll betwee
 If we properly wire up the Prev/Next buttons, anchoring them to the sides as well as the bottom button, properly center our logo/icons, and connect our buttons to the `navigate:` `@IBAction`, our demo app will properly lay itself out, transition on scroll, and navigate on button taps.
 
 ![Demo](http://i.imgur.com/h3Nzntp.gif "Demo")
+
+Additional Code: http://pastebin.com/drrym5N9
