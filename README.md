@@ -18,7 +18,7 @@ switch (value) {
     case 5:
         print("Catches exactly 5")
     case 6..<10:
-        print("Catches values from 6 to 10")
+        print("Catches values from 6 to 9")
     default:
         print("nothing")
 }
